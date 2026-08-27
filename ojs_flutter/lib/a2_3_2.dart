@@ -16,10 +16,7 @@ var b = true;
 var b2 = i < 10;
 var b3 = s.isEmpty;
 
-// assert(2+3 == 5); 안됨(버전문제?)
-// print(true && true); 안됨
-// print(true || true); 안됨
-// print(true == true); 안됨
+
 
 // 이것은 주석
 /**
@@ -30,7 +27,10 @@ void main(){
   // print('Hello, World!') 이건 에러
   // print('안녕하세요'); 이건 정상 동작, 세미콜론 여부
 
-
+  assert(2+3 == 5);
+  print(true && true);
+  print(true || true);
+  print(true == true);
   print('$_name은 $_age살입니다.');
   print('$_name은 ${_name.length} 글자입니다.');
 
