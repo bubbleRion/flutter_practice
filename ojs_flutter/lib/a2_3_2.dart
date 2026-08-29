@@ -19,6 +19,19 @@ var b3 = s.isEmpty;
 int f(int x){
   return x + 10;
 }
+int f2(int x ,int z){
+  return x + z + 10;
+}
+String f3(){
+  return '안녕하세요';
+}
+void f4(int x){
+  print(x);
+}
+greeting(String greet){
+  print('hello $greet');
+}
+
 
 // 이것은 주석
 /**
