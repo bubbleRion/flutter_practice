@@ -34,4 +34,7 @@ void main(){
   print('$_name은 $_age살입니다.');
   print('$_name은 ${_name.length} 글자입니다.');
 
+
+
+
 }
