@@ -7,7 +7,8 @@ class MyClass{
 void main(){
   var myClass = MyClass();
   print(myClass.isEven(10));
-
+  something('홍길동' , age : 10);
+  something('홍길동');
 }
 
 class Person {
@@ -18,3 +19,8 @@ class Person {
     print('안녕하세요 저는 $name입니다.');
   }
 }
+
+void something(String name , {int age = 10}){
+  
+}
+
