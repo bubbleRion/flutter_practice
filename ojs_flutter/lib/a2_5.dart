@@ -1,9 +1,10 @@
 class Person{
   String? name;
-  int age = 0;
-
+  int _age = 0;
+  
+  int get age => _age;
   void addOneYear(){
-    age++;
+    _age++;
   }
 }
 
@@ -11,6 +12,8 @@ void main(){
   var person = new Person();
 
   var person2 = Person();
-
+  person._age = 10;
+  person.addOneYear();
+  print(person._age);
 
 }
