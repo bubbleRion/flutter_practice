@@ -54,8 +54,19 @@ class Bat implements Monster , Flyable{
 // 
 // }
 
+enum Status {login, logout}
+
 void main(){
   var person = Person();
+  var authStatus = Status.logout;
+  switch(authStatus){
+    case Status.login:
+      print('로그인');
+      break;
+    case Status.logout: // 없으면 에러
+      print('로그아웃');
+      break;
+  }
   // person._age = 10; 에러
 
   print(person.age);
