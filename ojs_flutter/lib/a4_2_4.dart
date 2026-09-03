@@ -1,5 +1,7 @@
-// 4.2.1 Container
-// 4.2.2 Column
+// 4.2.4 Stack
+
+// Stack 위젯은 children에 나열한 여러 위젯을 순서대로 겹치게 한다.
+
 // 4_1.dart를 옮겨옴
 
 import 'package:flutter/material.dart';
@@ -28,31 +30,24 @@ class MyHomePage extends StatelessWidget {
       appBar : AppBar(
         title : Text('제목'),
       ),
-      // body : Container(
-      //   color : Colors.red,
-      //   width : 100,
-      //   height: 100,
-      //   padding: const EdgeInsets.all(8.0),
-      //   margin: const EdgeInsets.all(8.0),
-      // ), // 주로 여기에 코딩한다. 1번
-      body : Column(
+      body : Stack(
         children: <Widget>[
           Container(
-            color : Colors.red,
+            color : Colors.red, // 빨강
             width : 100,
             height: 100,
             padding: const EdgeInsets.all(8.0),
             margin: const EdgeInsets.all(8.0),
           ),
           Container(
-            color : Colors.green,
+            color : Colors.green, // 초록
             width : 100,
             height: 100,
             padding: const EdgeInsets.all(8.0),
             margin: const EdgeInsets.all(8.0),
           ),
           Container(
-            color : Colors.blue,
+            color : Colors.blue, // 파랑
             width : 100,
             height: 100,
             padding: const EdgeInsets.all(8.0),
