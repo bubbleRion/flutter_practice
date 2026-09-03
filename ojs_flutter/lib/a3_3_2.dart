@@ -24,7 +24,7 @@ class MyHomePage extends StatefulWidget{
 }
 
 class _MyHomePageState extends State<MyHomePage>{
-  var _text = 'Hello';
+  var _text = 'Hello'; // 1
 
   @override
   Widget build(BuildContext context){
@@ -33,12 +33,12 @@ class _MyHomePageState extends State<MyHomePage>{
         title : Text('Hello World'),
       ),
       body : Text(
-        _text,
+        _text, // 2
         style : TextStyle(fontSize :  40),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          setState(() {
+          setState(() { // 3
             _text = 'World';
           });
         },
@@ -47,3 +47,11 @@ class _MyHomePageState extends State<MyHomePage>{
     );
   }
 }
+
+// 1. 'Hello' 값이 할당된 문자열 변수 _text를 준비하고 
+// 2. Text 위젯에 표시되게 설정하고
+// 3. FloatingActionButton을 클릭했을 때 _text를 'World' 로 변경하고 setState() 메서드로 화면을 갱신한다.
+
+// 예제를 실행하고 버튼을 탭하면 화면의 글자가 'Hello' 에서 'World' 로 변경된다.
+// 매우 간단한 예제지만 사용자 행동에 따른 처리의 기본을 배울 수 있다.
+// 간단한 예제라 처음 한 번만 텍스트가 변한다.
