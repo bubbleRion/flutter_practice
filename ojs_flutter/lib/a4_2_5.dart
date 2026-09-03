@@ -11,16 +11,47 @@
 // 따라서 스크롤 기능 영역이 좁을 수 있다.
 // ListBody를 사용하면 스크롤 가능 영역이 가로로 꽉 차기 때문에 사용자가 스크롤하기 더 쉽다.
 
-// 0부터 99까지의 값을 갖는 리스트를 생성하여 스크롤이 되도록 해보자.
+
+
+// 4_1.dart를 옮겨옴
 
 import 'package:flutter/material.dart';
 
-void main(){
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      title : 'Flutter Demo',
+      theme : ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home : MyHomePage(),
+    );
+  }
+}
+// 여기까지는 공통 코드.
+
+// 여기;부터 수정.
+class MyHomePage extends StatelessWidget {
   final items = List.generate(100,(i) => i).toList(); // 0부터 99까지의 값을 갖는 리스트 생성
 
-  SingleChildScrollView(
-    child: ListBody(
-      children: items.map((i) => Text('$i')).toList(),
-    ),
-  );
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar : AppBar(
+        title : Text('제목'),
+      ),
+      body : SingleChildScrollView(
+        child: ListBody(
+          children: items.map((i) => Text('$i')).toList(),
+        ),
+      )
+    );
+  }
 }
+
+
+
+  
