@@ -25,13 +25,44 @@ class MyHomePage extends StatelessWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage>{
+  var _isChecked = false;
   @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
         title : Text('Checkbox / Radio / Switch'),
       ),
+      body : Padding(
+        padding : const EdgeInsets.all(0.0),
+        child : Center(
+          child : Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Checkbox(
+                value: _isChecked,
+                onChanged: (value){
+                  setState((){
+                    _isChecked = value;
+                  });
+                },
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Switch(value: _isChecked, onChanged: (value){
+                setState(() {
+                  _isChecked = value;
+                });
+              })
+            ],
+          )
+        )
+      )
     );
-  }
-  
+  } 
 }
+
+// 상태를 나타낼 불리언 타입의 변수가 필요하고 value 프로퍼티에 설정한다.
+// onChanged 이벤트는 체크값이 변할 때마다 발생하는 데 여기서 변경된 값이
+// 불리언 value 인수로 넘어오며 setState () 함수를 통해 value 프로퍼티에 지정한 변숫값을 변경하며 UI를 다시 그린다
+    
